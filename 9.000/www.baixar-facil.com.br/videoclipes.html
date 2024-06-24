@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html lang=”pt-br”>
+
+<!-- Mirrored from www.packdemusicas.com.br/videoclipes.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Jun 2024 04:31:15 GMT -->
+<head>
+    
+<title>Painel dos Video Clipes</title>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<link rel="stylesheet" type="text/css" href="reset.css">
+<link rel="shortcut icon" href="favicon.html"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="imgvideoclipes/favicon.png"/>
+
+<style>
+ 
+
+body {
+	background-image: url(imgvideoclipes/bg.png);
+	background-attachment: fixed;
+	background-size: 100%, 100%;
+	background-position: center, center;
+	color: #fff;
+	font-family: 'arial', sans-serif;
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 7px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #454545;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 630px;
+  --card-width: 390px;
+}
+
+
+:root {
+    /* Base font size */
+    font-size: 10px;
+
+    /* Full grid area variable */
+    --fullGrid: 1 / 1 / -1 / -1;
+}
+
+
+
+#over03 {
+  position:fixed;
+  top:0;
+  left:0;
+  background: linear-gradient(90deg, #00002f 21px, transparent 1%) center, linear-gradient(#00002f 21px, transparent 1%) center, #0000ff;
+    background-size: 22px 22px;
+  width:100%;
+  height:100%;
+  z-index:999999;
+}
+
+.inp03 {
+  width:500px;
+  margin: 30px auto;
+  margin-top: 75px;
+    border-radius: 15px;
+    border: 2px solid #4e00c2;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding-top: 20px;
+    padding-bottom: 45px;
+}
+
+.imglogin {
+  margin: 15px auto;
+  margin-bottom: 30px;
+}
+
+.con03 {
+  width:560px;
+  margin:30px auto;
+}
+    
+.label03 {
+  display:block;
+  text-align: center;
+  margin-top: -10px;
+  padding:15px 15px 15px 0;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+}    
+
+#senha03 {
+    width: 60%;
+    margin: 0 auto;
+    border: 2px solid #7700fa;
+    border-radius: 50px;
+    background: none;
+    color: #fff;
+    padding: 10px 0;
+    padding-left: 20px;
+    padding-right: 0px;
+    font-size: 30px;
+    transition: all .5s linear;
+}
+
+#senha03:hover, #senha03:focus, #concluir03:focus{
+  outline: 0;
+  transition: all .5s linear;
+  box-shadow: inset 0px 0px 10px #777;
+}
+
+.textointerno::-webkit-input-placeholder { /* WebKit browsers */
+    color: #999;
+    font-size: 19px;
+    font-family: 'arial', sans-serif;
+  letter-spacing: .5px;
+}
+
+#concluir03 {
+  width:65%;
+  margin: 0 auto;
+  background: rgba(119, 0, 250, 1);
+  color:#fff;
+border: none;
+    border-radius: 50px;
+  font-size:20px;
+  font-weight:bold;
+  padding:18px 0;
+  cursor:pointer;
+  transition: .4s;
+}
+
+#concluir03:hover {
+    background: rgba(119, 0, 250, 0.6);
+    border: none;
+}
+
+.avisosenha03 {
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-size: 15px;
+    line-height: 21px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 10px #4e00c2;
+    color: #fff;
+}
+
+
+
+
+header {
+    /* Create grid spanning viewport width & height */
+    display: grid;
+    grid-template-rows: 100vh;
+    overflow: hidden;
+    box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.5);
+}
+
+.video-bg {
+    /* Span the full grid */
+    grid-area: var(--fullGrid);
+
+    /* Re-size video to cover full screen while maintaining aspect ratio */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* Display video below overlay */
+    z-index: -1;
+}
+
+.video-overlay {
+    /* Span the full grid */
+    grid-area: var(--fullGrid);
+
+    /* Center Content */
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+
+    /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.logotipo {
+	width: 300px;
+	height: 200px;
+	margin: 0 auto;
+	background-image: url(imgvideoclipes/logotipo.png);
+}
+
+.video-overlay h1 {
+    font-size: 115px;
+    font-family: 'Anton', sans-serif;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    color: #00ffff;
+    text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4);
+}
+
+.video-overlay h2 {
+	width: 800px;
+	margin: 0 auto;
+	margin-top: 15px;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    color: #fff;
+    text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4);
+}
+
+.fontedotitulo {
+	font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+	font-family: 'Anton', sans-serif;
+	color: #00ffff;
+	box-shadow: none;
+}
+
+.informativo {
+	width: 100%;
+	height: 120px;
+  margin-bottom: 75px;
+	background-image: linear-gradient(to bottom right, #4e00c2, #4e00c2, #0000CD);
+	font-family: 'Arial', sans-serif;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.informativo p {
+	width: 900px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 27px;
+	line-height: 40px;
+	color: #fff;
+	font-weight: 700;
+}
+
+.destaqueinformativo {
+	background: #0000CD;
+	border: 2px solid #fff;
+	padding: 3px 6px;
+	text-transform: uppercase;
+	font-size: 19px;
+}
+
+
+.conteudo {
+	width: 1300px;
+	height: 640px;
+	margin: 0 auto;
+	margin-top: 60px;
+	padding: 20px 0;
+	display: flex;
+
+  align-items: center;
+  justify-content: center;
+	flex-wrap: wrap;
+}
+
+.divgenero {
+	width: 400px;
+	height: 640px;
+	margin: 0 5px;
+	margin-top: 30px;
+	flex: 1 1 400px;
+	text-align: center;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.card01 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card01.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card02 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card02.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card03 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card03.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card04 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card04.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card05 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card05.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card06 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card06.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card07 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card07.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card08 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card08.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card09 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card09.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card10 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card10.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card11 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card11.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card12 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card12.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card13 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card13.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card14 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card14.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card15 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card15.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card16 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card16.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card17 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card17.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card18 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card18.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card19 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card19.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card20 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card20.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card21 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card21.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card22 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card22.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card23 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card23.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card24 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card24.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card25 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card25.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card26 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card26.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card27 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card27.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card28 {
+  background: #000;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  background-image: url(imgvideoclipes/card28.png);
+  background-size: 100%, 700px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  font-family: cursive;
+  transition: .4s;
+}
+
+.card01 h1, .card02 h1, .card03 h1, .card04 h1, .card05 h1, .card06 h1, .card07 h1, .card08 h1, .card09 h1, .card10 h1, .card11 h1, .card12 h1, .card13 h1, .card14 h1, .card15 h1, .card16 h1, .card17 h1, .card18 h1, .card19 h1, .card20 h1, .card21 h1, .card22 h1, .card23 h1, .card24 h1, .card25 h1, .card26 h1, .card27 h1, .card28 h1 {
+	position: absolute;
+	top: 460px;
+	font-family: 'arial', sans-serif;
+	font-size: 46px;
+	font-weight: 900;
+	margin: 0 auto;
+}
+
+.card01 h2, .card02 h2, .card03 h2, .card04 h2, .card05 h2, .card06 h2, .card07 h2, .card08 h2, .card09 h2, .card10 h2, .card11 h2, .card12 h2, .card13 h2, .card14 h2, .card15 h2, .card16 h2, .card17 h2, .card18 h2, .card19 h2, .card20 h2, .card21 h2, .card22 h2, .card23 h2, .card24 h2, .card25 h2, .card26 h2, .card27 h2, .card28 h2 {
+	margin: 0 auto;
+	position: absolute;
+	top: 435px;
+	left: 40px;
+	font-family: 'arial', sans-serif;
+	font-size: 40px;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+.card01 h3, .card02 h3, .card03 h3, .card04 h3, .card05 h3, .card06 h3, .card07 h3, .card08 h3, .card09 h3, .card10 h3, .card11 h3, .card12 h3, .card13 h3, .card14 h3, .card15 h3, .card16 h3, .card17 h3, .card18 h3, .card19 h3, .card20 h3, .card21 h3, .card22 h3, .card23 h3, .card24 h3, .card25 h3, .card26 h3, .card27 h3, .card28 h3 {
+	position: absolute;
+	top: 420px;
+	left:44px;
+	padding: 10px 10px;
+	background: #4e00c2;
+	font-family: 'arial', sans-serif;
+	font-size: 16px;
+	font-weight: 900;
+	border-radius: 15px;
+}
+
+.card01 h4, .card02 h4, .card03 h4, .card04 h4, .card05 h4, .card06 h4, .card07 h4, .card08 h4, .card09 h4, .card10 h4, .card11 h4, .card12 h4, .card13 h4, .card14 h4, .card15 h4, .card16 h4, .card17 h4, .card18 h4, .card19 h4, .card20 h4, .card21 h4, .card22 h4, .card23 h4, .card24 h4, .card25 h4, .card26 h4, .card27 h4, .card28 h4 {
+	position: absolute;
+	top: 390px;
+	left:38px;
+	padding: 10px 10px;
+	background: #4e00c2;
+	font-family: 'arial', sans-serif;
+	font-size: 16px;
+	font-weight: 900;
+	border-radius: 15px;
+}
+
+.card01:hover, .card02:hover, .card03:hover, .card04:hover, .card05:hover, .card06:hover, .card07:hover, .card08:hover, .card09:hover, .card10:hover, .card11:hover, .card12:hover, .card13:hover, .card14:hover, .card15:hover, .card16:hover, .card17:hover, .card18:hover, .card19:hover, .card20:hover, .card21:hover, .card22:hover, .card23:hover, .card24:hover, .card25:hover, .card26:hover, .card27:hover, .card28:hover {
+  transition: .4s;
+  background-size: 103%, 103%;
+  background-repeat: no-repeat;
+  color: #00ffff;
+}
+
+.card01:hover:before, .card01:hover:after, .card02:hover:before, .card02:hover:after, .card03:hover:before, .card03:hover:after, .card04:hover:before, .card04:hover:after, .card05:hover:before, .card05:hover:after, .card06:hover:before, .card06:hover:after, .card07:hover:before, .card07:hover:after, .card08:hover:before, .card08:hover:after, .card09:hover:before, .card09:hover:after, .card10:hover:before, .card10:hover:after, .card11:hover:before, .card11:hover:after, .card12:hover:before, .card12:hover:after, .card13:hover:before, .card13:hover:after, .card14:hover:before, .card14:hover:after, .card15:hover:before, .card15:hover:after, .card16:hover:before, .card16:hover:after, .card17:hover:before, .card17:hover:after, .card18:hover:before, .card18:hover:after, .card19:hover:before, .card19:hover:after, .card20:hover:before, .card20:hover:after, .card21:hover:before, .card21:hover:after, .card22:hover:before, .card22:hover:after, .card23:hover:before, .card23:hover:after, .card24:hover:before, .card24:hover:after, .card25:hover:before, .card25:hover:after, .card26:hover:before, .card26:hover:after, .card27:hover:before, .card27:hover:after, .card28:hover:before, .card28:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+
+.card01::before, .card02::before, .card03::before, .card04::before, .card05::before, .card06::before, .card07::before, .card08::before, .card09::before, .card10::before, .card11::before, .card12::before, .card13::before, .card14::before, .card15::before, .card16::before, .card17::before, .card18::before, .card19::before, .card20::before, .card21::before, .card22::before, .card23::before, .card24::before, .card25::before, .card26::before, .card27::before, .card28::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #00ffff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.card01::after, .card02::after, .card03::after, .card04::after, .card05::after, .card06::after, .card07::after, .card08::after, .card09::after, .card10::after, .card11::after, .card12::after, .card13::after, .card14::after, .card15::after, .card16::after, .card17::after, .card18::after, .card19::after, .card20::after, .card21::after, .card22::after, .card23::after, .card24::after, .card25::after, .card26::after, .card27::after, .card28::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #00ffff, #0000CD 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+
+.botao {
+	width: 350px;
+	height: 80px;
+	margin: 0 auto;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.botao button {
+  width: 350px;
+  height: 80px;
+  margin: 0 auto;
+  font-family: 'arial', sans-serif;
+  font-size: 19px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-weight: 700;
+  color: #000;
+  background-color: #00ffff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
+
+.botao button:hover {
+  background-color: #4e00c2;
+  box-shadow: 0px 5px 20px rgba(138, 43, 226, 0.5);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+
+
+
+footer {
+	max-width: 100%;
+    padding: 15px 0;
+    margin-top: 75px;
+}
+
+.orgfooter {
+	width: 900px;
+	height: 120px;
+	margin: 30px auto;
+	border-radius: 15px;
+	padding: 15px 0;
+	background-color: rgba(0,0,0,0.5);
+	border: 1px solid #00ffff;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+    justify-content: center;
+}
+
+.logo {
+  width: 175px;
+  height: 70px;
+  margin: 0 auto;
+  flex: 1 1 175px;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+  width: 175px;
+  height: 70px;
+  margin: 0 auto;
+}
+
+.esqfooter {
+  width: 175px;
+  margin: 0 auto;
+  flex: 1 1 175px;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+}
+
+.esqfooter ul {
+  width: 180px;
+  text-align: left;
+  list-style-type: none;
+}
+
+.esqfooter ul li {
+  padding: 2px 0;
+  font-size: 21px;
+}
+
+.esqfooter ul li a {
+  text-decoration: none;
+  font-size: 17px;
+  color: #ccc;
+  text-transform: uppercase;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  transition: .4s;
+}
+
+.esqfooter ul li a:hover {
+  opacity: .7;
+  letter-spacing: 0.2px;
+  color: #fff;
+}
+
+.esqfooter ul li a:visited {
+  color: #fff;
+}
+
+.centrofooter {
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  flex: 1 1 200px;
+}
+
+.centrofooter h3 {
+	font-family: 'Anton', sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.centrofooter p {
+	margin: 7px auto;
+  margin-top: 10px;
+	font-family: 'Arial', sans-serif;
+	font-size: 18px;
+	letter-spacing: .5px;
+}
+
+.div01 {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.div02 {
+  width: 220px;
+  margin: 0 auto;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.div02 h3 {
+  font-family: 'Arial', serif;
+  font-size: 19px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-weight: 900;
+}
+
+.div02 p {
+  font-family: 'Arial', sans-serif;
+  font-size: 17px;
+  text-align: center;
+  margin-top: 7px;
+  color: #fff;
+}
+
+.div02 p:nth-child(2) {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  margin-top: -2px;
+}
+
+.dirfooter {
+  width: 250px;
+  margin: 0 auto;
+  flex: 1 1 250px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+    justify-content: center;
+}
+
+.dirfooter img {
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+  border-radius: 15px;
+  transform: scale(1.0);
+  transition: .4s;
+}
+
+.dirfooter img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+@media only screen and (max-width: 500px){
+  
+  html {
+  scroll-behavior: smooth;
+} 
+
+  body {
+  background: #121212;
+}
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+    background-image: linear-gradient(180deg, #000, #000030, #000030, #000);
+  }
+
+
+  #over03 {
+  position:fixed;
+  top:0;
+  left:0;
+  background: linear-gradient(90deg, #151538 21px, transparent 1%) center, linear-gradient(#151538 21px, transparent 1%) center, #fff;
+    background-size: 22px 22px;
+  width:100%;
+  height:100%;
+  z-index:999999;
+}       
+  
+.inp03 {
+  width:300px;
+  margin:0px auto;
+    border-radius: 30px;
+    border: 2px solid #400c77;
+    margin-top: 60px;
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.7);
+    padding: 30px 0;
+    padding-bottom: 30px;
+    font-size: 16px;
+}
+
+.imglogin img {
+  width: 260px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.con03 {
+  width:560px;
+  margin:30px auto;
+}
+    
+.label03 {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  display:block;
+  padding:15px 15px 15px 0;
+  color: #fff;
+  font-family: 'arial', sans-serif;
+  font-size: 19px;
+    letter-spacing: 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+}    
+
+#senha03 {
+    width: 76%;
+    margin: 0 auto;
+    border: 2px solid #7700fa;
+    border-radius: 50px;
+    background: none;
+    color: #fff;
+    padding: 5px 0;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 0px;
+    font-size: 30px;
+    transition: all .5s linear;
+}
+
+#senha03:hover, #senha03:focus, #concluir03:focus{
+  outline: 0;
+  transition: all .5s linear;
+  box-shadow: inset 0px 0px 10px #777;
+  padding-top: 15px;
+  padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 0px;
+}
+
+.textointerno::-webkit-input-placeholder { /* WebKit browsers */
+    color: #999;
+    font-size: 16px;
+    font-family: 'arial', sans-serif;
+  letter-spacing: .5px;
+}
+
+#concluir03 {
+  width:85%;
+  margin: 0 auto;
+  position: relative;
+  background: #7700fa;
+  color:#fff;
+  font-family: 'arial', sans-serif;
+border: 2px solid #7700fa;
+    border-radius: 50px;
+  font-size:20px;
+  font-weight:bold;
+  padding:15px 0;
+  cursor:pointer;
+    transition: 0.4s;
+}
+
+#concluir03:hover {
+  width:85%;
+  margin: 0 auto;
+  position: relative;
+  background: #4e00a3;
+  color: #fff;
+  border: 2px solid #4e00a3;
+  font-family: 'arial', sans-serif;
+  letter-spacing: .5px;
+  border-radius: 50px;
+  margin: -0px 0 0 0px;
+  padding:15px 0;
+}
+
+.avisosenha03 {
+    width: 240px;
+    margin: 0 auto;
+    margin-top: 35px;
+    padding: 15px 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: .3px;
+    border: 2px solid #4b0082;
+    background-color:rgba(17, 0, 76, 0.5);
+    color: #fff;
+    font-family: 'arial', sans-serif;
+}  
+
+
+.topo01 {
+  width: 360px;
+  height: 500px;
+  margin: 0 auto;
+  text-align: center;
+  background-image: url(imgvideoclipes/topo.png);
+  background-size: 360px, 400px;
+  background-position: center, center;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudotopo {
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.titulodotopo {
+  width: 300px;
+  margin: 15px auto;
+  font-family: 'Anton', sans-serif;
+  font-size: 65px;
+  line-height: 70px;
+  color: #fff;
+  text-align: center;
+  animation: neon2 4.5s ease-in-out infinite alternate;
+}
+
+
+.titulodotopo02 {
+  width: 280px;
+  margin: 0 auto;
+  font-family: 'arial', sans-serif;
+  font-size: 21px;
+  line-height: 27px;
+  color: #fff;
+  padding: 10px 0;
+  background-color:rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 10px #121251,
+      0 0 8px #121251, 0 0 10px #121251, 0 0 12px #121251, 0 0 17px #121251;
+  }
+  to {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #121251,
+      0 0 4px #121251, 0 0 5px #121251, 0 0 6px #121251, 0 0 9px #121251;
+  }
+}
+
+
+.subtitulomobile {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 19px;
+  color: #00ffff;
+}
+
+
+
+
+.info {
+  width: 250px;
+  margin: 30px auto;
+  padding: 15px 10px;
+  color: #fff;
+  border-radius: 15px;
+  background-color:rgba(0, 0, 57, 0.7);
+  font-family: 'arial', sans-serif; 
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: .5px;
+  text-align: center;
+}
+
+.conteudomobile {
+  width: 350px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item01 {
+  width: 160px;
+  height: 120px;
+  margin: 15px 6px;
+  background: #000;
+  box-shadow: 1px 1px 20px #444;
+  border-radius: 15px;
+  position: relative;
+  text-align: center;
+  flex: 1 1 160px;
+}
+
+.item01 p {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  bottom: 5px;
+  left: 2px;
+  color: #fff;
+  background-color:rgba(0, 0, 0, 0.5);
+  padding: 5px 0;
+  font-size: 12px;
+  line-height: 15px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: .5px;
+  font-weight: 900;
+}
+
+
+
+footer {
+    width: 90%;
+    margin: 30px auto;
+    margin-top: 45px;
+    padding: 30px 0;
+    background-image: linear-gradient(180deg, #000, #000030, #000);
+    border-radius: 15px;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: .5px;
+}
+
+.logo {
+    width: 330px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo img {
+    width: 150px;
+    height: 55px;
+    margin: 0 auto;
+}
+
+
+.centrofooter {
+    width: 330px;
+    margin: 45px auto;
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.centrofooter h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.centrofooter p {
+    font-size: 16px;
+
+}
+
+.centrofooter p:nth-child(2) {
+    font-size: 19px;
+    margin: 10px auto;
+}
+
+
+.dirfooter {
+  width: 330px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.dirfooter img {
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+  border-radius: 15px;
+  transform: scale(1.0);
+  transition: .4s;
+}
+
+.dirfooter img:hover {
+  transform: scale(1.1);
+} 
+}
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+
+<div id="over03">
+<div class="inp03">
+  <div class="imglogin"><img src="imgvideoclipes/imglogin.png"></div>
+<label class="label03" for="password">Digite a sua senha:</label>
+<input type="password" id="senha03" class="textointerno" placeholder="Coloque a sua senha aqui." /><br>
+<div style="margin-top: 10px;"><button id="concluir03">Entrar</button></div>
+<div class="avisosenha03"><legend><span style="font-weight: bold; text-transform: uppercase;" class="amarelo">Importante:</span> Não compartilhe a sua senha com ninguém. Caso aja mais de um computador acessando o painel com a mesma senha, a sua conta será suspensa.</legend></div>
+</div>
+</div> 
+
+
+
+
+ <div class="desktop"> 
+
+
+
+<header>
+<video class="video-bg" autoplay muted loop>
+		<source src="imgvideoclipes/bg.mp4" type="video/mp4" />
+  </video>
+
+<div class="video-overlay">
+		<div class="logotipo">&nbsp;</div>
+		<h1>SEJA BEM-VINDO</h1>
+		<h2>Agora você tem acesso a mais de <span class="fontedotitulo">9000 video clipes</span> prontos para download.</h2>
+	</div>
+
+</header>
+
+
+
+<section class="informativo"><p>Escolha um gênero e clique no botão &nbsp;<span class="destaqueinformativo">Acessar Vídeos</span>&nbsp; para ter acesso a todos os Video Clipes disponíveis.</p></section>
+
+
+
+
+<section class="conteudo">
+<div class="divgenero"><div class="card01"><h4>309 videos</h4><br><h2>Eletrônicas antigas</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1rghsj1n4RkI6YJCg052_VHFmEEultdWc" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card02"><h4>223 videos</h4><br><h2>Eletrônicas atuais</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1tKDkap7wGXittc2PbtlN-xwrBC1HcGxG" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card03"><h3 style="left: 40px;">541 videos</h3><br><h2 style="top: 465px; font-size: 44px">FLASHBACK</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1536v71hMRznSAUlrVdVrz8bFn5Jc9nKD" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+</section>
+
+
+
+<section class="conteudo">
+<div class="divgenero"><div class="card04"><h3 style="left: 40px;">630 videos</h3><br><h2 style="top: 465px; font-size: 45px;">EURODANCE</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1zu5iT28ufaxFIzsywAVaxF_1ZAX0blv4" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card05"><h4>426 videos</h4><br><h2>SERTANEJOS ANTIGOS</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1ztwT5NPts-hvQYUIY7oo9vZFqoA8trB-" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card06"><h4>312 videos</h4><br><h2>SERTANEJOS ATUAIS</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1FFtkDpPVabhAIa88dAi1QJwbJIqRGUoF" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+</section>
+
+
+
+<section class="conteudo">
+<div class="divgenero"><div class="card07"><h4>329 videos</h4><br><h2>FORRÓ ANTIGOS</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1YEU6sGd2sUKq9_ceCLlRSMCM19fzN-D3" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card08"><h3 style="left: 20px; top: 420px;">268 videos</h3><br><h2 style="font-size: 42px; top: 465px; left: 22px;">FORRÓ ATUAIS</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1shZ9wDzQcc7JBSGKdcAufS3wwFQct8Ee" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card09"><h4>316 videos</h4><br><h2>DANCE ANTIGOS</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1tG5yM1ht1R0wMwutZVTv4F9IbfOy3bVj" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+</section>
+
+
+
+<section class="conteudo">
+<div class="divgenero"><div class="card10"><h4 style="top: 382px;">255 videos</h4><br><h2 style="font-size: 44px; top: 427px;">DANCE ATUAIS</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1Je-4QgeIK7lDWo6GnzsNlhlbiiiO2RMP" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card11"><h3 style="left: 135px;">207 videos</h3><br><h2 style="top: 465px; left: 140px; font-size: 48px;">AXÉ</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1H5x77zn7YZ8ct3Av9D-U-VaqbyXaGSS0" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card12"><h4 style="top: 425px; left: 22px;">496 videos</h4><br><h2 style="font-size: 44px; top: 470px; left: 27px; letter-spacing: -1px;">BLACK MUSIC</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1cPwxoj7xxGCxawfYG6JAb-nMbfYSow0J" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+</section>
+
+
+
+<section class="conteudo">
+<div class="divgenero"><div class="card13"><h3 style="left: 135px;">216 videos</h3><br><h2 style="top: 465px; left: 110px; font-size: 48px;">BREGA</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1q44IJ7eMU8JNRbVnrYZEATgn3t7mNTZ3" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card14"><h3 style="left: 135px;">151 videos</h3><br><h2 style="top: 465px; font-size: 48px; left: 65px;">COUNTRY</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1Dco6JA9DRNy6s-iIANhUmfaMTeVcNW8z" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card15"><h3 style="left: 130px;">325 videos</h3><br><h2 style="top: 465px; font-size: 48px; left: 120px;">FUNK</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1C_02ESiKuXjRR6AS7ToNJimB-_VCtDZP" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+</section>
+
+
+
+<section class="conteudo">
+<div class="divgenero"><div class="card16"><h3 style="left: 135px;">449 videos</h3><br><h2 style="top: 465px; font-size: 48px; left: 90px;">GOSPEL</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1WGmxpntwmihvLkJn-dU4ko9xUrVbW3M1" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card17"><h3 style="left: 135px;">279 videos</h3><br><h2 style="top: 465px; font-size: 48px; left: 90px;">HIP HOP</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1RsMpbW-JHvETpNgqAmeEOhEmvFws3AOo" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card18"><h3 style="left: 130px;">308 videos</h3><br><h2 style="top: 465px; font-size: 48px; left: 75px;">INFANTIL</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1pVzaJ3ok9Bq0-nK1G-kuvLYWSvqJ4ShX" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+</section>
+
+
+
+<section class="conteudo">
+<div class="divgenero"><div class="card19"><h3 style="left: 140px;">303 videos</h3><br><h2 style="top: 465px; font-size: 48px; left: 140px;">MPB</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1di4F2OEoq48UhVWQ1uemAcdPPw73kcHv" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card20"><h3 style="left: 130px;">199 videos</h3><br><h2 style="top: 465px; font-size: 48px; left: 90px;">PAGODE</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1OWGyeJBM6-YBANAMEKdwXGphka9TLmUi" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card21"><h3 style="left: 130px;">337 videos</h3><br><h2 style="top: 465px; letter-spacing: -1px; font-size: 44px; left: 33px;">POP ANTIGOS</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1SOSeb0qTZNm0oYqWLX7YvKwo7D8OCYHV" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+</section>
+
+
+
+<section class="conteudo">
+<div class="divgenero"><div class="card22"><h3 style="left: 130px;">214 videos</h3><br><h2 style="top: 465px; letter-spacing: -1px; font-size: 48px; left: 40px;">POP ATUAIS</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1ZBnVe_YTmM6rKaPmMlfxrO5q6C2hAYD_" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card23"><h3 style="left: 130px;">185 videos</h3><br><h2 style="top: 465px; font-size: 48px; left: 33px;">RAP & TRAP</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1LnPtbwC2zU40RNi58A_NmgtVUjWvaI5h" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card24"><h3 style="left: 130px;">190 videos</h3><br><h2 style="top: 465px; font-size: 48px; left: 80px;">REGGAE</h2><div class="botao"><a href="https://drive.google.com/drive/folders/12RC4tgY63-Qz0DFKteZ2_1gmp4FFU79V" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+</section>
+
+
+
+<section class="conteudo">
+<div class="divgenero"><div class="card25"><h4>455 videos</h4><br><h2 style="font-size:34px; top: 440px;">ROCK INTERNACIONAL</h2><div class="botao"><a href="https://drive.google.com/drive/folders/12pUbCRiN1p51ItWhjc5ximakR2WHah89" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card26"><h3 style="left: 140px; top: 428px;">396 videos</h3><br><h2 style="top: 475px; font-size: 36px;">ROCK NACIONAL</h2><div class="botao"><a href="https://drive.google.com/drive/folders/10jqYkPl2nGjoY7ucwWhpM6WQvqCrq_q5" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+
+<div class="divgenero"><div class="card27"><h3 style="left: 125px;">358 videos</h3><br><h2 style="top: 470px; font-size: 40px;">ROMÂNTICAS</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1DzJlkN1oDdJtgXQKed2MLZK5vKZ1T0-u" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+</section>
+
+
+
+<section class="conteudo">
+<div class="divgenero"><div class="card28"><h3 style="left: 130px;">311 videos</h3><br><h2 style="top: 465px; font-size: 44px; font-size: 48px; left: 100px;">SAMBA</h2><div class="botao"><a href="https://drive.google.com/drive/folders/1WKAjqw8mdYYuYi4xnQxukBm3ccIkMMkm" target="_blank"><button>Acessar Videos</button></a></div></div></div>
+</section>
+
+
+
+
+
+
+
+<footer>
+
+<div class="orgfooter">
+
+<div class="logo">
+<img src="Imagens/logo02.png" width="150" height="75">
+</div>
+
+
+<div class="centrofooter">
+<h3>FALE CONOSCO:</h3>
+<p>(11) 98292-4960</p>
+<p>contato@packdemusicas.com.br</p>
+</div>
+
+
+<div class="dirfooter">
+<a href="https://www.facebook.com/packdemusicas" target="_blank"><img src="imgvideoclipes/Facebook.png"></a>
+<a href="https://www.instagram.com/packdemusicasoficial/" target="_blank"><img src="imgvideoclipes/Instagram.png"></a>
+<a href="https://www.youtube.com/@packdemusicas" target="_blank"><img src="imgvideoclipes/Youtube.png"></a>
+</div>
+
+</div>
+
+</footer>
+
+
+</div>
+
+
+
+
+
+
+<div class="mobile">
+
+
+<section class="topo01">
+<div class="conteudotopo">
+<div><img src="imgvideoclipes/logotipo.png" width="150" height="100"></div>
+<div class="titulodotopo">SEJA BEM-VINDO</div>
+<div class="titulodotopo02"><h2>Agora você tem acesso a mais de <span class="subtitulomobile">9000 video clipes</span> prontos para download.</h2></div>
+</div>
+</section>
+
+<div class="info">Escolha um gênero e clique na imagem para acessar os <span style="font-family: 'Anton', sans-serif; font-size: 21px; line-height: 36px; text-transform: uppercase;">vídeo clipes.</span></div>
+
+<div class="conteudomobile">
+
+<a href="https://drive.google.com/drive/folders/1rghsj1n4RkI6YJCg052_VHFmEEultdWc" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb01.png" width="165" height="120" loading="lazy"><p>Eletrônicas antigas</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1tKDkap7wGXittc2PbtlN-xwrBC1HcGxG" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb02.png" width="165" height="120" loading="lazy"><p>Eletrônicas atuais</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1536v71hMRznSAUlrVdVrz8bFn5Jc9nKD" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb03.png" width="165" height="120" loading="lazy"><p>Flashback</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1zu5iT28ufaxFIzsywAVaxF_1ZAX0blv4" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb04.png" width="165" height="120" loading="lazy"><p>Eurodance</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1ztwT5NPts-hvQYUIY7oo9vZFqoA8trB-" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb05.png" width="165" height="120" loading="lazy"><p>Sertanejos antigos</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1FFtkDpPVabhAIa88dAi1QJwbJIqRGUoF" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb06.png" width="165" height="120" loading="lazy"><p>sertanejos atuais</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1YEU6sGd2sUKq9_ceCLlRSMCM19fzN-D3" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb07.png" width="165" height="120" loading="lazy"><p>forró antigos</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1shZ9wDzQcc7JBSGKdcAufS3wwFQct8Ee" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb08.png" width="165" height="120" loading="lazy"><p>forró atuais</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1tG5yM1ht1R0wMwutZVTv4F9IbfOy3bVj" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb09.png" width="165" height="120" loading="lazy"><p>dance antigos</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1Je-4QgeIK7lDWo6GnzsNlhlbiiiO2RMP" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb10.png" width="165" height="120" loading="lazy"><p>dance atuais</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1H5x77zn7YZ8ct3Av9D-U-VaqbyXaGSS0" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb11.png" width="165" height="120" loading="lazy"><p>axé</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1cPwxoj7xxGCxawfYG6JAb-nMbfYSow0J" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb12.png" width="165" height="120" loading="lazy"><p>black music</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1q44IJ7eMU8JNRbVnrYZEATgn3t7mNTZ3" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb13.png" width="165" height="120" loading="lazy"><p>brega</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1Dco6JA9DRNy6s-iIANhUmfaMTeVcNW8z" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb14.png" width="165" height="120" loading="lazy"><p>country</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1C_02ESiKuXjRR6AS7ToNJimB-_VCtDZP" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb15.png" width="165" height="120" loading="lazy"><p>funk</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1WGmxpntwmihvLkJn-dU4ko9xUrVbW3M1" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb16.png" width="165" height="120" loading="lazy"><p>Gospel</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1RsMpbW-JHvETpNgqAmeEOhEmvFws3AOo" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb17.png" width="165" height="120" loading="lazy"><p>hip hop</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1pVzaJ3ok9Bq0-nK1G-kuvLYWSvqJ4ShX" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb18.png" width="165" height="120" loading="lazy"><p>infantil</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1di4F2OEoq48UhVWQ1uemAcdPPw73kcHv" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb19.png" width="165" height="120" loading="lazy"><p>mpb</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1OWGyeJBM6-YBANAMEKdwXGphka9TLmUi" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb20.png" width="165" height="120" loading="lazy"><p>pagode</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1SOSeb0qTZNm0oYqWLX7YvKwo7D8OCYHV" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb21.png" width="165" height="120" loading="lazy"><p>pop antigos</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1ZBnVe_YTmM6rKaPmMlfxrO5q6C2hAYD_" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb22.png" width="165" height="120" loading="lazy"><p>pop atuais</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1LnPtbwC2zU40RNi58A_NmgtVUjWvaI5h" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb23.png" width="165" height="120" loading="lazy"><p>rap & trap</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/12RC4tgY63-Qz0DFKteZ2_1gmp4FFU79V" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb24.png" width="165" height="120" loading="lazy"><p>reggae</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/12pUbCRiN1p51ItWhjc5ximakR2WHah89" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb25.png" width="165" height="120" loading="lazy"><p>rock internacional</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1DzJlkN1oDdJtgXQKed2MLZK5vKZ1T0-u" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb26.png" width="165" height="120" loading="lazy"><p>rock nacional</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1DzJlkN1oDdJtgXQKed2MLZK5vKZ1T0-u" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb27.png" width="165" height="120" loading="lazy"><p>românticas</p></div></a>
+
+<a href="https://drive.google.com/drive/folders/1WKAjqw8mdYYuYi4xnQxukBm3ccIkMMkm" target="_blank"><div class="item01"><img style="border-radius: 15px;" src="imgvideoclipes/thumb28.png" width="165" height="120" loading="lazy"><p>samba</p></div></a>
+
+</div>
+
+
+
+
+
+
+<footer>
+
+<div class="logo">
+<img src="Imagens/logo02.png">
+</div>
+
+
+<div class="centrofooter">
+<h3>FALE CONOSCO:</h3>
+<p>(11) 98292-4960</p>
+<p>contato@packdemusicas.com.br</p>
+</div>
+
+
+<div class="dirfooter">
+<a href="https://www.facebook.com/packdemusicas" target="_blank"><img src="imgvideoclipes/Facebook.png"></a>
+<a href="https://www.instagram.com/packdemusicasoficial/" target="_blank"><img src="imgvideoclipes/Instagram.png"></a>
+<a href="https://www.youtube.com/@packdemusicas" target="_blank"><img src="imgvideoclipes/Youtube.png"></a>
+</div>
+
+</footer>
+
+
+
+</div>
+
+
+
+
+
+
+<script src="spamblock/reset/banimento/script03/script.js"></script> 
+
+
+
+</body>
+
+<!-- Mirrored from www.packdemusicas.com.br/videoclipes.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Jun 2024 04:31:30 GMT -->
+</html>
